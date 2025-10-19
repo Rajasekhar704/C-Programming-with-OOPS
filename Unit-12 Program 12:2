@@ -1,0 +1,33 @@
+#include <iostream>
+#include <deque>
+using namespace std;
+
+int main() {
+    cout << "Roll no: 24B11AI023" << endl;
+    cout << "=== DEQUE OPERATIONS ===" << endl;
+
+    deque<int> dq;
+
+    dq.push_back(20);
+    dq.push_front(10);
+    dq.push_back(30);
+
+    cout << "Elements in deque: ";
+    for (size_t i = 0; i < dq.size(); i++)
+        cout << dq[i] << " ";
+    cout << endl;
+
+    cout << "Element at position 1: " << dq.at(1) << endl;
+
+    dq.pop_front();
+    dq.pop_back();
+
+    cout << "Deque after pop_front and pop_back: ";
+    for (auto x : dq)
+        cout << x << " ";
+    cout << endl;
+
+    cout << "Size of deque: " << dq.size() << endl;
+
+    return 0;
+}
